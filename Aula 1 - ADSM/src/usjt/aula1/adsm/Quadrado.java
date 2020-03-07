@@ -2,8 +2,8 @@ package usjt.aula1.adsm;
 
 public class Quadrado extends Poligono implements Diagonal {
 
-	public Quadrado(double base, double altura) {
-		super(base ,altura);
+	public Quadrado(double lado) {
+		super(lado ,lado);
 	}
 	
 	@Override
@@ -17,8 +17,14 @@ public class Quadrado extends Poligono implements Diagonal {
 	}
 
 	@Override
-	public String toString() {
-		return "Quadrado [Area =" + area() + ", Diagonal =" + diagonal() + "]";
+	public double perimetro() {
+		return 4 * base;
 	}
+	
+	@Override
+	public String toString() {
+		return "Quadrado [Area =" + area() + ", Diagonal =" + diagonal() + " Perimetro =" + perimetro() + "]";
+	}
+
 
 }

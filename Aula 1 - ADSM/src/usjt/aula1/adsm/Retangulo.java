@@ -15,10 +15,17 @@ public class Retangulo extends Poligono implements Diagonal {
 	public double diagonal() {
 		return Math.sqrt(Math.pow(base, 2)*Math.pow(altura, 2));
 	}
+	
+	@Override
+	public double perimetro() {
+		return 2 * base + 2 * altura;
+	}
 
 	@Override
 	public String toString() {
-		return "Retangulo [Area =" + area() + ", Diagonal =" + diagonal() + "]";
+		return "Retangulo [Area =" + area() + ", Diagonal =" + diagonal() + " Perimetro = "+ perimetro() +"]";
 	}
+
+
 
 }

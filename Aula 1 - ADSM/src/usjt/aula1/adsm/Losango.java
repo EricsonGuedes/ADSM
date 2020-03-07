@@ -10,10 +10,16 @@ public class Losango extends Poligono {
 	public double area() {
 		return getBase()*getAltura();
 	}
-
+	
+	@Override
+	public double perimetro() {
+		return 4 * base;
+	}
 	@Override
 	public String toString() {
-		return "Losango [Area =" + area() + "]";
+		return "Losango [Area =" + area() + " Perimetro = " + perimetro() +"]";
 	}
+
+
 
 }

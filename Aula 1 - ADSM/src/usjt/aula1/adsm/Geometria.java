@@ -8,10 +8,10 @@ public class Geometria {
 		
 		ArrayList<Figura> figuras = new ArrayList<>();
 		figuras.add(new Circulo(10));
-		figuras.add(new Triangulo(10,10));
+		figuras.add(new Triangulo(4,3));
 		figuras.add(new Losango(5,2));
-		figuras.add(new Retangulo(2,2));
-		figuras.add(new Quadrado(4,2));
+		figuras.add(new Retangulo(10,10));
+		figuras.add(new Quadrado(4));
 		
 		for(Figura fig:figuras){
 			System.out.println("-----------------------------");
