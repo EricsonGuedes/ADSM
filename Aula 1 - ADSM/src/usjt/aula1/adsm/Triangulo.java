@@ -2,9 +2,33 @@ package usjt.aula1.adsm;
 
 public class Triangulo extends Poligono {
 	
-	public Triangulo(double base, double altura) {
-		super(base, altura);
+	protected double ladoA;
+	protected double ladoB;
+	
+	public Triangulo(double ladoA, double ladoB, double base, double altura) {
+		super(base/2, altura);
+		this.ladoA = ladoA;
+		this.ladoB = ladoB;
+		
 	}
+	
+	public double getLadoA() {
+		return ladoA;
+	}
+
+	public void setLadoA(double ladoA) {
+		this.ladoA = ladoA;
+	}
+
+	public double getLadoB() {
+		return ladoB;
+	}
+
+	public void setLadoB(double ladoB) {
+		this.ladoB = ladoB;
+	}
+
+
 
 	@Override
 	public double area() {
@@ -12,21 +36,14 @@ public class Triangulo extends Poligono {
 	}
 	
 	@Override
-	/*Como estamos utilizando um triangulo cujo a base e altura são conhecidos,
-	podemos utilzar a formula de pitagoras*/
 	public double perimetro() {
-		return (2 * Math.sqrt(Math.pow(base, 2)+Math.pow(altura, 2))) + 2 * base;
+		return ladoA + ladoB + base;
 	}
 
 	@Override
 	public String toString() {
 		return "Triangulo [Area =" + area() + " Perimetro = " + perimetro() +  "]";
 	}
-
-
-
-
-
 	
 
 }
