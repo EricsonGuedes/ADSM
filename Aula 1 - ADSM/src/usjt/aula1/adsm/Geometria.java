@@ -7,7 +7,7 @@ public class Geometria {
 	public static void main(String[] args) {
 		
 		ArrayList<Figura> figuras = new ArrayList<>();
-		
+		//Adicionando Figuras
 		figuras.add(new Circulo(10));
 		figuras.add(new Triangulo(4,4));
 		figuras.add(new Losango(5,2));
