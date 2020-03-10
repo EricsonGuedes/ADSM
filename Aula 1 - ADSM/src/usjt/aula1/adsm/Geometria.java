@@ -18,7 +18,7 @@ public class Geometria {
 		figuras.add(new Esfera (5));
 		figuras.add(new Cubo (5,5));
 		figuras.add(new Piramide (5,5));
-		
+			
 		
 		for(Figura fig:figuras){
 			System.out.println("--------------------------------------");

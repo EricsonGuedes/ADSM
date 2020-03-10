@@ -14,8 +14,8 @@ public class Triangulo extends Poligono {
 	@Override
 	/*Como estamos utilizando um triangulo cujo a base e altura são conhecidos,
 	podemos utilzar a formula de pitagoras*/
-	public double perimetro() {
-		return (2 * Math.sqrt(Math.pow(base, 2)+Math.pow(altura, 2))) + 2 * base;
+	public double perimetro() {	
+		return (2 * Math.sqrt(Math.pow(base, 2)+Math.pow(altura, 2))) +  base;
 	}
 
 	@Override

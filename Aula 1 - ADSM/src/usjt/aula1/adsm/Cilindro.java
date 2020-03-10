@@ -12,7 +12,7 @@ public class Cilindro extends Circulo implements Volume{
 	
 	@Override
 	public double volume() {
-		return Math.PI * Math.pow(raio, 3) * altura;
+		return Math.PI * Math.pow(raio,2 ) * altura;
 	}
 	
 	@Override
