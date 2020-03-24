@@ -8,7 +8,6 @@ public class Programa {
 		if(args.length == 0) {
 			args = lista;
 		}
-		Nomes nomes = new Nomes(args);
 	}
 
 }
