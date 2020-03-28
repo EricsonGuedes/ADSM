@@ -10,7 +10,7 @@ public class Incremental {
 		numero = ++count;
 	}
 
-	public static synchronized  Incremental getInstance() {
+	static synchronized  Incremental getInstance() {
 		if(singleton ==null) {
 		singleton = new Incremental();}
 		return singleton;
