@@ -1,4 +1,4 @@
-package adapter;
+package aula4.adsm.ex41;
 
 import java.util.ArrayList;
 import java.util.List;

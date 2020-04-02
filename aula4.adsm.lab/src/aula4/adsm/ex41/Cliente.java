@@ -1,4 +1,4 @@
-package adapter;
+package aula4.adsm.ex41;
 
 public class Cliente {
 	private SomadorEsperado somador;
