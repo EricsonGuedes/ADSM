@@ -1,4 +1,4 @@
-package aula4.adsm.ex41;
+package aula4.adsm.ex42;
 import java.util.List;
 public class SomadorExistente{
 	public int somaLista(List<Integer> lista){
