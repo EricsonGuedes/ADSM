@@ -1,4 +1,4 @@
-package aula5.adsm.ex81;
+package aula5.adsm.ex81.ex82;
 
 public class Noticia {
 	String textoNoticia;
@@ -36,10 +36,10 @@ public class Noticia {
 	public void setTopico(String topico) {
 		this.topico = topico;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Texto: " + textoNoticia + "\n" + "Data:" + dia + "/" + mes + ", Tópico: " + topico;
+		return "Texto: " + textoNoticia + "\n" + "Data:" + dia + "/" + mes + ", Tópico: " + topico + "\n";
 	}
 
 }
