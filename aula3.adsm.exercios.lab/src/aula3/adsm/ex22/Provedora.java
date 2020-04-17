@@ -15,8 +15,8 @@ public interface Provedora {
 			System.out.println("O arquivo nao foi encontrado");
 		}
 		return sb.toString();
-		
+
 	}
-	
+
 	String proverInfo();
 }

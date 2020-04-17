@@ -16,10 +16,10 @@ import java.text.SimpleDateFormat;
 public class Cliente {
 	private Pizzaiolo pizzaiolo;
 	private Date data;
-	
+
 	public Cliente (Date data) {
 		this.data = data;
-	
+
 
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(data);
@@ -40,7 +40,7 @@ public class Cliente {
 			break;
 		}
 	}
-	
+
 	public void pedido() {
 
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy (EEEE)");
@@ -56,6 +56,6 @@ public class Cliente {
 			System.out.println("Calzone de hoje - " + df.format(data) + ":\n\t" + calzone.obterIngredientes());
 		}
 	}
-	
+
 
 }

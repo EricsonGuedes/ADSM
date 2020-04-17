@@ -7,5 +7,5 @@ public class Quarta implements MensagemDoDia{
 		return "Salmos 23:1 \n" +  
 				"O Senhor é meu pastor e nada me faltara";
 	}
-	
+
 }

@@ -12,7 +12,7 @@ public class FerramentaConsole implements Ferramenta{
 		}
 		return "";
 	}
-	
-	
+
+
 
 }

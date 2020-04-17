@@ -16,11 +16,11 @@ public class SelectionSort implements Ordenacao{
 			x = vetor[i];
 			vetor[i] = vetor[min];
 			vetor[min] = x;
-			
+
 		}
-		 for(int y=0;y<10;y++){
-			 
-		    }	System.out.println("SelectSort: " +Arrays.toString(vetor));
-		
+		for(int y=0;y<10;y++){
+
+		}	System.out.println("SelectSort: " +Arrays.toString(vetor));
+
 	}
 }

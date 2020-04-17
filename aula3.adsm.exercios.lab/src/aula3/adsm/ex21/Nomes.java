@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Nomes {
 	ArrayList<Nome> nomes;
-	
+
 	public Nomes(String[] lista) {
 		nomes = new ArrayList<>();
 		processar(lista);

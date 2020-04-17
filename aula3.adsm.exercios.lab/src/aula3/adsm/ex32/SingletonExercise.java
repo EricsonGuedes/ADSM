@@ -74,17 +74,17 @@ class Deck {
 			card.print( );
 		}
 	}
-	
+
 	private List<Card> cards;
-	
+
 	private static Deck singletonInstance;
-	
+
 	synchronized static Deck getInstance() {
 		if (singletonInstance == null)
 			singletonInstance = new Deck();
 		return singletonInstance;
 	}
-	
+
 }
 public class SingletonExercise {
 	public static void main(String args[]) {

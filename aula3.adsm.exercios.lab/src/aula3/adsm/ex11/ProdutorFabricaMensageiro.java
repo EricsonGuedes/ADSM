@@ -3,7 +3,7 @@ package aula3.adsm.ex11;
 public final class ProdutorFabricaMensageiro {
 	private ProdutorFabricaMensageiro() {
 	}
-	
+
 	public static FabricaMensageiros getFabrica() {
 		int numero = (int)(100000*Math.random());
 		numero = numero%2;
@@ -13,7 +13,7 @@ public final class ProdutorFabricaMensageiro {
 			return getFabrica("ARQUIVO");
 		}
 	}
-	
+
 	private static FabricaMensageiros getFabrica(String tipoFab) {
 		switch(tipoFab) {
 		case "TELA":

@@ -2,7 +2,7 @@ package aula4.adsm.ex42;
 
 public class Cliente {
 	private SomadorEsperado somador;
-	
+
 	public Cliente(SomadorEsperado somador) { 
 		this.somador = somador;
 	}

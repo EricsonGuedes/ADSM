@@ -7,7 +7,7 @@ public class Duplicar extends TransformadorDeTextos{
 		String duplicata;
 		duplicata = texto;
 		System.out.println("String duplicada: "+ duplicata + " " + texto);	
-		
+
 	}
 
 }

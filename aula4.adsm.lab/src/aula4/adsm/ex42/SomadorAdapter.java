@@ -14,6 +14,6 @@ public class SomadorAdapter implements SomadorEsperado {
 		SomadorExistente se = new SomadorExistente();
 		return se.somaLista(lista);
 	}
-	
+
 }
 

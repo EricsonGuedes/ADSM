@@ -9,7 +9,7 @@ public class Teste {
 		Arrays.sort(v, new ComparadorDouble());
 		System.out.println(Arrays.toString(v));
 	}
-	
+
 	private static Double[] construirVetor() {
 		int NUM = 8;
 		Double[] vetor = new Double[NUM];

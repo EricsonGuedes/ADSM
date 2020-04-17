@@ -1,7 +1,7 @@
 package aula3.adsm.ex21;
 
 public class Nome {
-	
+
 	private String nome, sobrenome;
 
 	public Nome(String nome, String sobrenome) {
@@ -23,4 +23,4 @@ public class Nome {
 	}	
 }
 
-	
+

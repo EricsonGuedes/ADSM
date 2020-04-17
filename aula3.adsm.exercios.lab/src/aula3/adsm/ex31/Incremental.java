@@ -12,7 +12,7 @@ public class Incremental {
 
 	static synchronized  Incremental getInstance() {
 		if(singleton ==null) {
-		singleton = new Incremental();}
+			singleton = new Incremental();}
 		return singleton;
 	}
 
