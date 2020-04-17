@@ -16,7 +16,7 @@ public class Teste {
 		System.out.println("\nArquivo com objeto: " + ioFacade.abrirObjeto("cliente.obj"));
 
 	}
-	
+
 	private static void escreverObjeto() {
 		Cliente cliente = new Cliente(1, "Lili", 9);
 		try {
