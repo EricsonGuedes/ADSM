@@ -18,11 +18,18 @@
 		<form class="form-inline" method="POST" th:object="${previsaoDoTempo}"
 			th:action="@{/previsoes}" style="margin: 20px 0">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Dia da semana" th:field="*{diadasemana}" /> 
+				<input type="text" class="form-control" placeholder="Dia da semana" th:field="*{diadasemana}" />
+				<input type="text" class="form-control" placeholder="Data" th:field="*{data}" />
+				<input type="text" class="form-control" placeholder="Hora" th:field="*{hora}" /> 
 				<input type="text" class="form-control" placeholder="Temperatura Mínima" th:field="*{temperaturamin}" /> 
-				<input type="text" class="form-control" placeholder="Temperatura Máxima" th:field="*{temperaturamax}" /> 
+				<input type="text" class="form-control" placeholder="Temperatura Máxima" th:field="*{temperaturamax}" />
+			</div>
+			<br>
+			<div class="form-group"> 
 				<input type="text" class="form-control" placeholder="Umidade Relativa do Ar" th:field="*{umidaderelativadoar}" />
-				<input type="text" class="form-control" placeholder="Descrição" th:field="*{descricao}" />
+				<input type="text" class="form-control" placeholder="Latitude" th:field="*{latitude}" />
+				<input type="text" class="form-control" placeholder="Longitude" th:field="*{longitude}" />		
+				<input type="text" class="form-control" placeholder="Descrição" th:field="*{descricao}" />														
 				<button type="submit" class="btn btn-primary">Adicionar</button>
 			</div>
 		</form>
@@ -31,18 +38,26 @@
 				<thead>
 					<tr>
 						<th>Dia da Semana</th>
+						<th>Data</th>
+						<th>Hora</th>
 						<th>Temperatura Mínima</th>
 						<th>Temperatura Máxima</th>
 						<th>Umidade Relativa do ar</th>
-						<th>Descrição</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Descricao</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="previsaoDoTempo : ${previsoes}">
 						<td th:text="${previsaoDoTempo.diadasemana}"></td>
+						<td th:text="${previsaoDoTempo.data}"></td>
+						<td th:text="${previsaoDoTempo.hora}"></td>
 						<td th:text="${previsaoDoTempo.temperaturamin}"></td>
 						<td th:text="${previsaoDoTempo.temperaturamax}"></td>
 						<td th:text="${previsaoDoTempo.umidaderelativadoar}"></td>
+						<td th:text="${previsaoDoTempo.latitude}"></td>
+						<td th:text="${previsaoDoTempo.longitude}"></td>
 						<td th:text="${previsaoDoTempo.descricao}"></td>
 					</tr>
 				</tbody>

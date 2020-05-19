@@ -25,5 +25,9 @@ public class PrevisaoDoTempo implements Serializable {
 	private double temperaturamin;
 	private double temperaturamax;
 	private double umidaderelativadoar;
+	private String data;
+	private String hora;
+	private String latitude;
+	private String longitude;
 	private String descricao;
 }

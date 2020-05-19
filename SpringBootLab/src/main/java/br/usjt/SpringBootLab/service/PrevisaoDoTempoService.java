@@ -2,9 +2,11 @@ package br.usjt.SpringBootLab.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.usjt.SpringBootLab.model.PrevisaoDoTempo;
 import br.usjt.SpringBootLab.repository.PrevisaoDoTempoRepository;
-
+@Service
 public class PrevisaoDoTempoService {
 	@Autowired
 	private PrevisaoDoTempoRepository previsaoDoTempoRepo;
