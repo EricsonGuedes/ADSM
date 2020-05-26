@@ -2,18 +2,22 @@ package br.usjt.SpringBootLab.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Table(name="previsaodotempo")
+@Data @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Table(name="tb_previsaodotempo")
 public class PrevisaoDoTempo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -21,13 +25,25 @@ public class PrevisaoDoTempo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY ) //Tipo de chave primaria (1,2,3,4,5,6...)
 	private Long id;
-	private String diadasemana;
+	//private String diadasemana;
+	@Column (nullable=false, length=100)
 	private double temperaturamin;
+	@Column (nullable=false, length=100)
 	private double temperaturamax;
+	@Column (nullable=false, length=100)
 	private double umidaderelativadoar;
+	@Column (nullable=false, length=100)
 	private String data;
+	@Column (nullable=false, length=100)
 	private String hora;
+	@Column (nullable=false, length=100)
 	private String latitude;
+	@Column (nullable=false, length=100)
 	private String longitude;
+	@Column (nullable=false, length=100)
 	private String descricao;
+	
+	@OneToOne (optional = false)
+	@JoinColumn (name = "diadasemana")
+	private DiasDaSemana diasDaSemana;
 }
