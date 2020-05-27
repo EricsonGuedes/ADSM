@@ -45,5 +45,5 @@ public class PrevisaoDoTempo implements Serializable {
 	
 	@OneToOne (optional = false)
 	@JoinColumn (name = "diadasemana")
-	private DiasDaSemana diasDaSemana;
+	private DiasDaSemana diadasemana;
 }

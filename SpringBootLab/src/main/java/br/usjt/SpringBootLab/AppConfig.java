@@ -1,10 +1,10 @@
 package br.usjt.SpringBootLab;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 import br.usjt.SpringBootLab.Interceptor.LoginInterceptor;
-import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
@@ -18,4 +18,6 @@ public class AppConfig implements WebMvcConfigurer {
 		addPathPatterns("/**").
 		excludePathPatterns("/login", "/", "/fazerLogin", "/bootstrap/**", "/webjars/**");
 	}
+	
+	
 }
