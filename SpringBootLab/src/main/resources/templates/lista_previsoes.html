@@ -38,28 +38,31 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th>Dia da Semana</th>
 						<th>Data</th>
 						<th>Hora</th>
 						<th>Temperatura Mínima</th>
 						<th>Temperatura Máxima</th>
 						<th>Umidade Relativa do ar</th>
+						<th>Cidade</th>						
 						<th>Latitude</th>
 						<th>Longitude</th>
 						<th>Descricao</th>
-						<th>Dia da Semana</th>
 					</tr>
 				</thead>
 				<tbody>
 					 <tr th:each="previsaodotempo : ${previsoes}">
-					<td th:text="${previsaodotempo.data}"></td>
+						<td th:text="${previsaodotempo.diadasemana.diadasemana}"></td>  						
+						<td th:text="${previsaodotempo.data}"></td>
 						<td th:text="${previsaodotempo.hora}"></td>
 						<td th:text="${previsaodotempo.temperaturamin}"></td>
 						<td th:text="${previsaodotempo.temperaturamax}"></td>
 						<td th:text="${previsaodotempo.umidaderelativadoar}"></td>
-						<td th:text="${previsaodotempo.latitude}"></td>
-						<td th:text="${previsaodotempo.longitude}"></td>
+						<td th:text="${previsaodotempo.cidade.cidade}"></td>						
+						<td th:text="${previsaodotempo.cidade.latitude}"></td>
+						<td th:text="${previsaodotempo.cidade.longitude}"></td>
 						<td th:text="${previsaodotempo.descricao}"></td>
-						<td th:text="${previsaodotempo.diadasemana.id}"></td>  
+
 					</tr> 
 				</tbody>
 			</table>

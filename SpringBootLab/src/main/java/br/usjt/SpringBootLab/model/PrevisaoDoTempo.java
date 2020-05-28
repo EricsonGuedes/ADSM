@@ -2,15 +2,16 @@ package br.usjt.SpringBootLab.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -36,14 +37,17 @@ public class PrevisaoDoTempo implements Serializable {
 	private String data;
 	@Column (nullable=false, length=100)
 	private String hora;
-	@Column (nullable=false, length=100)
-	private String latitude;
-	@Column (nullable=false, length=100)
-	private String longitude;
+	//@Column (nullable=false, length=100)
+	//private String latitude;
+	//@Column (nullable=false, length=100)
+	//private String longitude;
 	@Column (nullable=false, length=100)
 	private String descricao;
 	
 	@OneToOne (optional = false)
 	@JoinColumn (name = "diadasemana")
 	private DiasDaSemana diadasemana;
+	
+	@ManyToOne (cascade = CascadeType.ALL)
+	private Cidade cidade;
 }
