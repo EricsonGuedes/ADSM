@@ -15,25 +15,6 @@
 		<div class="panel-heading">
 			<h1 class="panel-title">Previsão do Tempo</h1>
 		</div>
-		<!-- 
-		<form class="form-inline" method="POST" th:object="${previsaodotempo}"
-			th:action="@{/previsoes}" style="margin: 20px 0">
-			<div class="form-group">
-			<!-- 	<input type="text" class="form-control" placeholder="Dia da semana" th:field="*{diadasemana}" /> 
-				<input type="text" class="form-control" placeholder="Data" th:field="*{data}" />
-				<input type="text" class="form-control" placeholder="Hora" th:field="*{hora}" /> 
-				<input type="text" class="form-control" placeholder="Temperatura Mínima" th:field="*{temperaturamin}" /> 
-				<input type="text" class="form-control" placeholder="Temperatura Máxima" th:field="*{temperaturamax}" />
-			</div>
-			<div class="form-group"> 
-				<input type="text" class="form-control" placeholder="Umidade Relativa do Ar" th:field="*{umidaderelativadoar}" />
-				<input type="text" class="form-control" placeholder="Latitude" th:field="*{latitude}" />
-				<input type="text" class="form-control" placeholder="Longitude" th:field="*{longitude}" />		
-				<input type="text" class="form-control" placeholder="Descrição" th:field="*{descricao}" />														
-				<button type="submit" class="btn btn-primary">Adicionar</button>
-			</div>
-		</form> -->
-		
 		<div class="panel-body">
 			<table class="table">
 				<thead>
@@ -44,26 +25,25 @@
 						<th>Temperatura Mínima</th>
 						<th>Temperatura Máxima</th>
 						<th>Umidade Relativa do ar</th>
-						<th>Cidade</th>						
+						<th>Cidade</th>
 						<th>Latitude</th>
 						<th>Longitude</th>
 						<th>Descricao</th>
 					</tr>
 				</thead>
 				<tbody>
-					 <tr th:each="previsaodotempo : ${previsoes}">
-						<td th:text="${previsaodotempo.diadasemana.diadasemana}"></td>  						
+					<tr th:each="previsaodotempo : ${previsoes}">
+						<td th:text="${previsaodotempo.diadasemana.diadasemana}"></td>
 						<td th:text="${previsaodotempo.data}"></td>
 						<td th:text="${previsaodotempo.hora}"></td>
 						<td th:text="${previsaodotempo.temperaturamin}"></td>
 						<td th:text="${previsaodotempo.temperaturamax}"></td>
 						<td th:text="${previsaodotempo.umidaderelativadoar}"></td>
-						<td th:text="${previsaodotempo.cidade.cidade}"></td>						
+						<td th:text="${previsaodotempo.cidade.cidade}"></td>
 						<td th:text="${previsaodotempo.cidade.latitude}"></td>
 						<td th:text="${previsaodotempo.cidade.longitude}"></td>
 						<td th:text="${previsaodotempo.descricao}"></td>
-
-					</tr> 
+					</tr>
 				</tbody>
 			</table>
 		</div>
