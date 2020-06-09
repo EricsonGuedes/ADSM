@@ -1,6 +1,7 @@
 package br.usjt.SpringBootLab.model;
 
 import java.io.Serializable;
+
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,6 +20,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Data @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Table(name="tb_cidade")
+@JsonIdentityInfo(
+		generator = ObjectIdGenerators.PropertyGenerator.class, 
+		property = "id")
+
 public class Cidade implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -26,10 +33,11 @@ public class Cidade implements Serializable {
 	@Column (nullable=false, length=100)
 	private String cidade;
 	@Column (nullable=false, length=100)
-	private String latitude;
+	private Double latitude;
 	@Column (nullable=false, length=100)
-	private String longitude;
+	private Double longitude;
 
 	@OneToMany (mappedBy = "cidade", cascade = CascadeType.ALL)
 	private List<PrevisaoDoTempo> previsaodotempo;
+
 }

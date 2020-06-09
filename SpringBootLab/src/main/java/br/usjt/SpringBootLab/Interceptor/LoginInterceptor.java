@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter{
+	/*
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler)
@@ -19,4 +20,5 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		//se já logou, deixa a requisição passar e chegar no controller
 		return true;
 	}
+	*/
 }

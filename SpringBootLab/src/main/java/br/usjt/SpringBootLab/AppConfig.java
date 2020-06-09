@@ -15,7 +15,7 @@ public class AppConfig implements WebMvcConfigurer {
 		registry.addInterceptor(
 				new LoginInterceptor()).
 		addPathPatterns("/**").
-		excludePathPatterns("/login", "/", "/fazerLogin", "/bootstrap/**", "/webjars/**");
+		excludePathPatterns("/login", "/", "/fazerLogin", "/bootstrap/**", "/webjars/**", "/cidades/**");
 	}
 
 

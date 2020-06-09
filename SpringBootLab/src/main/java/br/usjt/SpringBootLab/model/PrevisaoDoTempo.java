@@ -11,13 +11,19 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Data @Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Table(name="tb_previsaodotempo")
+@Entity @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Table(name="tb_previsaodotempo")
+@JsonIdentityInfo(
+		  generator = ObjectIdGenerators.PropertyGenerator.class, 
+		  property = "id")
 public class PrevisaoDoTempo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -26,7 +32,7 @@ public class PrevisaoDoTempo implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY ) //Tipo de chave primaria (1,2,3,4,5,6...)
 	private Long id;
 	@Column (nullable=false, length=100)
-	private double temperaturamin;
+	private double temperaturamin;	
 	@Column (nullable=false, length=100)
 	private double temperaturamax;
 	@Column (nullable=false, length=100)
